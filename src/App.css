@@ -1,30 +1,19 @@
-/* General styles */
 .App {
   text-align: center;
 }
 
-/* Header styles */
 header {
   background-color: #f2f2f2;
   padding: 20px;
-  text-align: center; /* Center-align content */
-}
-
-.header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 header img {
-  height: 120px; /* Adjust height of the logo */
-  width: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Add space between logo and search form */
+  height: 100px;
+  width: 150px;
 }
 
-.search-form {
-  display: flex;
-  align-items: center;
+form {
+  margin-top: 20px;
 }
 
 input[type="text"] {
@@ -44,24 +33,23 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Search results styles */
 .search-results {
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .search-result {
-  margin-bottom: 200px;
-  padding: 200px;
+  margin-bottom: 20px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .search-result h3 {
-  margin-top: 10;
+  margin-top: 0;
 }
 
 .search-result p {
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .search-result .url {
@@ -69,14 +57,10 @@ button:hover {
   font-size: 14px;
 }
 
-/* Footer styles */
 footer {
+  margin-top: 500px;
   background-color: #f2f2f2;
   padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center; /* Center align text in footer */
 }
 
 footer p {
@@ -100,30 +84,4 @@ footer nav ul li a {
 
 footer nav ul li a:hover {
   text-decoration: underline;
-}
-header img {
-  display: block;
-  margin: 0 auto 20px; /* Center the logo horizontally and add space below */
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* Add this CSS to ensure the main content area (including search results) is visible without scrolling */
-/* Add this CSS to ensure the main content area (including search results) is visible without scrolling */
-main {
-  margin-top: 20px; /* Adjust as needed */
-  padding-bottom: 100px; /* Add padding at the bottom to accommodate footer */
-  overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport height */
-}
-
-/* Adjust this CSS to ensure the footer is always visible at the bottom */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #f2f2f2;
-  padding: 20px;
 }

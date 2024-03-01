@@ -9,15 +9,33 @@ function App() {
 
   const handleSearch = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
-    console.log('Performing search for:', query); // Log the search query to verify if the function is called
-
-    // Simulate search results for demonstration purposes
-    setSearchResults([...Array(10).keys()].map(i => ({
-      title: `Search Result ${i+1}`,
-      url: `https://example.com/result-${i+1}`,
-      description: `Description of search result ${i+1}`
-    })));
+  
+    // Filter search results based on the query entered by the user
+    const filteredResults = [
+      {
+        title: 'How to create an AWS account',
+        url: 'https://example.com/aws-account-creation',
+        description: 'Step-by-step guide to create an AWS account',
+      },
+      {
+        title: 'How to access AWS',
+        url: 'https://example.com/access-aws',
+        description: 'Instructions on how to access your AWS account',
+      },
+      {
+        title: 'How to create an instance in AWS',
+        url: 'https://example.com/create-aws-instance',
+        description: 'Guide to creating an EC2 instance in AWS',
+      },
+    ].filter(result =>
+      result.title.toLowerCase().includes(query.toLowerCase()) || // Check if title contains the query
+      result.description.toLowerCase().includes(query.toLowerCase()) // Check if description contains the query
+    );
+  
+    // Set the filtered search results
+    setSearchResults(filteredResults);
   }
+  
 
   return (
     <div className="App">
